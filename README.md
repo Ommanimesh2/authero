@@ -20,7 +20,7 @@ This project is a Spring Boot-based authentication server with **Role-Based Acce
 - Java 17 or above
 - Maven
 - GitHub and Google OAuth 2.0 Client IDs
-- PostgreSQL (for database connection, although H2 can be used for testing)
+- SQL (for database connection, although H2 can be used for testing)
 
 ### Steps to Run the Project
 
