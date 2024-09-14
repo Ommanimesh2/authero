@@ -1,0 +1,33 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: authero
+  datasource:
+    url: jdbc:mysql://localhost:3306/authero
+    username: root
+    password: PASSWORD
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+security:
+  jwt:
+    secret: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+    expirationMs: 36000000
+
+oauth2:
+  github:
+    clientId: CLIENT_ID
+    clientSecret: CLIENT_SECRET
+    tokenUrl: https://github.com/login/oauth/access_token
+    userUrl: https://api.github.com/user
+  google:
+    clientId: CLIENT_ID
+    clientSecret: CLIENT_SECRET
+    tokenUrl: https://oauth2.googleapis.com/token
+    userUrl: https://openidconnect.googleapis.com/v1/userinfo
